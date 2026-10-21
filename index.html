@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#f0eeeb"/><title>study.method — preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f0eeeb;--muted:#d6cfd0;--rose:#b9a8a4;--taupe:#8a6d66;--choc:#5f4d49;--ink:#2e2322}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px 'DM Sans',sans-serif}
+button{font:inherit;cursor:pointer}h1,h2,h3,.logo{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.035em}
+h1{font-size:clamp(43px,5.2vw,83px);line-height:1.06;margin:19px 0 18px}
+h2{font-size:clamp(28px,3.4vw,43px);margin:0 0 17px}h3{font-size:24px;margin:12px 0}
+.shell{min-height:100vh;display:grid;grid-template-columns:239px minmax(0,1fr)}
+.sidebar{padding:36px 19px;border-right:1px solid var(--muted);display:flex;flex-direction:column;gap:39px}
+.logo{font-size:31px;padding-left:6px}.logo span{color:var(--taupe)}
+nav{display:grid;gap:6px}nav button{border:0;background:none;color:var(--choc);text-align:left;border-radius:13px;padding:13px 14px}
+nav button.active{background:var(--muted);color:var(--ink);font-weight:700}
+.sidefoot{margin-top:auto;font-size:12px;color:var(--taupe);line-height:1.8;padding-left:9px}
+main{padding:33px clamp(22px,4vw,78px) 70px;min-width:0}
+.top{display:flex;justify-content:space-between;align-items:center;color:var(--choc);font-size:11px;font-weight:700;letter-spacing:.09em;margin-bottom:46px}
+.pill{border:1px solid var(--rose);padding:10px 16px;border-radius:80px;letter-spacing:0;font-weight:500}.content{max-width:1100px;margin:auto}
+.hero{border-radius:28px;background:var(--muted);padding:55px clamp(26px,4vw,60px);display:flex;justify-content:space-between;gap:23px;min-height:325px;align-items:center}
+.hero p{max-width:520px;color:var(--choc);line-height:1.75}.ornament{font-family:Georgia,serif;font-size:clamp(60px,10vw,150px);color:var(--taupe);opacity:.68;white-space:nowrap}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.21em;text-transform:uppercase;color:var(--taupe)}
+.btn{background:var(--ink);border:1px solid var(--ink);color:var(--cream);padding:14px 21px;border-radius:12px;font-weight:700}
+.btn.secondary{background:transparent;color:var(--ink);border-color:var(--rose)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:27px}
+.section-top{display:flex;align-items:center;justify-content:space-between;margin:42px 0 20px}
+.section-top span{font-size:12px;color:var(--taupe)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.card{border:1px solid var(--muted);border-radius:22px;padding:25px;background:#f8f6f4;min-height:207px}
+.card:nth-child(2){background:#e8e1e0}.card:nth-child(3){background:#e5d9d6}
+.card p{color:var(--choc);line-height:1.7;font-size:13px}.dec{font-family:Georgia,serif;color:var(--taupe);font-size:24px}
+.panel{border:1px solid var(--muted);background:#f8f6f4;border-radius:24px;padding:35px;max-width:870px}
+.question{font-family:Fraunces,serif;font-size:31px;margin:24px 0 23px}
+.choice{padding:17px 19px;border:1px solid var(--muted);border-radius:12px;background:var(--cream);text-align:left;width:100%;display:block;margin:9px 0;color:var(--ink)}
+.choice:hover,.choice.selected{background:var(--muted);border-color:var(--taupe)}
+.small{font-size:13px;color:var(--choc);line-height:1.8}
+.timer{font-family:Fraunces,serif;font-size:clamp(60px,10vw,126px);text-align:center;margin:25px 0 35px}
+.timer-buttons{text-align:center}.timer-buttons button{margin:5px}
+.method{border:1px solid var(--muted);border-radius:16px;padding:22px;margin:12px 0;background:#f8f6f4}
+.method p{color:var(--choc);line-height:1.7}.field{width:100%;border:1px solid var(--rose);border-radius:12px;padding:16px;background:var(--cream);color:var(--ink);font:inherit;resize:vertical}
+.disclaimer{font-size:12px;color:var(--choc);margin:18px 0}
+@media(max-width:900px){.shell{grid-template-columns:1fr}.sidebar{border:0;border-bottom:1px solid var(--muted);padding:19px 22px;gap:15px}
+.sidebar nav{display:flex;overflow-x:auto}.sidebar nav button{white-space:nowrap;padding:11px}.sidefoot{display:none}main{padding:24px 21px 44px}
+.top{margin-bottom:18px}.hero{padding:34px 26px}.ornament{font-size:65px}.cards{grid-template-columns:1fr}.card{min-height:unset}}
+@media(max-width:460px){.ornament{display:none}.top{font-size:10px}.pill{padding:8px}.panel{padding:21px}.section-top h2{font-size:27px}}
+</style></head>
+<body><div class="shell"><aside class="sidebar"><div class="logo">study<span>.</span>method <span style="font-size:16px">⋆˙⟡</span></div>
+<nav id="nav"></nav><p class="sidefoot">⋆.ೃ࿔*:･<br>Your own space to learn what works.</p></aside>
+<main><header class="top"><span>YOUR STUDY SPACE</span><span class="pill">website preview · no sign in</span></header>
+<div class="content" id="content"></div></main></div>
+<script>
+let tab='home', q=0, answers={}, seconds=15*60,running=false,timerHandle=null;
+const pages={home:'Overview',quiz:'Study profile',methods:'Study methods',focus:'Focus timer'};
+const marks={home:'⋆˙⟡',quiz:'.ೃ༄',methods:'⋆˚꩜｡',focus:'༄.°'};
+const questions=[
+['What makes studying hardest right now?','Getting started','Staying focused','Remembering things','Reading and understanding','Working through numbers'],
+['How long can you focus comfortably?','10 minutes','15 minutes','25 minutes','40 minutes or longer'],
+['Which kind of studying do you do most?','Facts and vocabulary','Maths and coding','Reading and writing','A mixture'],
+['What helps you begin?','A very small task','A timer and a break','A checklist','A flexible plan'],
+['Which approach would you like to explore?','Active recall','Flashcards','Focus sprints','Worked examples']
+];
+const methods=[
+['Active recall','Close the book and try to remember what you studied before looking at the answer.','⋆˙⟡'],
+['Spaced repetition','Review information over several days. Revisit the hardest questions more often.','.ೃ༄'],
+['Focus sprints','Choose one manageable goal. Work for a set time and take a proper break.','⋆˚꩜｡'],
+['Worked examples','Study a solved problem, then tackle a similar one yourself.','༄.°']];
+function go(page){tab=page;render();window.scrollTo(0,0)}
+function card(title,text,mark){return '<article class="card"><div class="dec">'+mark+'</div><h3>'+title+'</h3><p>'+text+'</p></article>'}
+function render(){
+document.getElementById('nav').innerHTML=Object.keys(pages).map(k=>'<button class="'+(k===tab?'active':'')+'" onclick="go(\''+k+'\')">'+marks[k]+' &nbsp; '+pages[k]+'</button>').join('');
+let h='';
+if(tab==='home'){
+h='<section class="hero"><div><span class="eyebrow">⋆˙⟡ YOUR SPACE TO LEARN</span><h1>Find your own<br>way to study.</h1><p>Not every study routine works for everyone. Explore your habits, discover practical methods, and build a routine you actually enjoy using.</p><div class="actions"><button class="btn" onclick="go(\'quiz\')">Find my study method</button><button class="btn secondary" onclick="go(\'methods\')">Explore methods</button></div></div><div class="ornament">⋆˚꩜｡</div></section><div class="section-top"><h2>Made for the way you learn</h2><span>01 — 03</span></div><div class="cards">'+card('Understand your habits','Answer a few thoughtful questions about focus, memory, and getting started.','⋆˙⟡')+card('Discover what works','Try active recall, flashcards, spaced repetition, and more.','.ೃ༄')+card('Start small, stay focused','Set a simple focus timer and turn plans into manageable sessions.','⋆˚꩜｡')+'</div>';
+}else if(tab==='quiz'){
+if(q<questions.length){let a=questions[q];h='<span class="eyebrow">STUDY PROFILE · '+(q+1)+' OF '+questions.length+'</span><h2 style="margin-top:19px">Find out what works for you.</h2><div class="panel"><p class="small">This questionnaire recommends study strategies. It does not screen for or diagnose learning disabilities.</p><div class="question">'+a[0]+'</div>'+a.slice(1).map((x,i)=>'<button class="choice" onclick="answers['+q+']='+i+';q++;render()">'+x+'</button>').join('')+'<div class="actions"><button class="btn secondary" onclick="q=Math.max(0,q-1);render()">Previous</button></div></div>'}
+else{let rec=answers[0]===2?'active recall and spaced repetition':answers[0]===4?'worked examples and small steps':answers[0]===1?'short focus sprints':'small tasks and clear checklists';h='<span class="eyebrow">YOUR PERSONAL STARTING POINT</span><h2 style="margin-top:18px">Your starting point ⋆˙⟡</h2><div class="panel"><h3>Try this first.</h3><p class="small">Based on your answers, '+rec+' may be worth trying. Different subjects often benefit from different strategies. Notice what helps and adjust as you go.</p><div class="actions"><button class="btn" onclick="go(\'methods\')">Explore the methods</button><button class="btn secondary" onclick="q=0;render()">Retake quiz</button></div></div>'}
+}else if(tab==='methods'){
+h='<span class="eyebrow">THE METHOD LIBRARY</span><h2 style="margin-top:17px">Better ways to practice.</h2><p class="small">Explore proven learning strategies. There is no single perfect study style for everyone.</p><div style="margin-top:27px">'+methods.map(a=>'<article class="method"><span style="color:var(--taupe)">'+a[2]+'</span><h3>'+a[0]+'</h3><p>'+a[1]+'</p></article>').join('')+'</div>';
+}else if(tab==='focus'){
+h='<span class="eyebrow">ONE THING AT A TIME</span><h2 style="margin-top:17px">A little progress counts.</h2><div class="panel"><p class="small" style="text-align:center">Choose your study sprint</p><div class="actions" style="justify-content:center">'+[10,15,25,40].map(n=>'<button class="btn secondary" onclick="setLength('+n+')">'+n+' min</button>').join('')+'</div><div class="timer" id="clock">'+clock()+'</div><div class="timer-buttons"><button class="btn" onclick="toggle()">'+(running?'Pause':'Start')+'</button><button class="btn secondary" onclick="setLength(15)">Reset</button></div></div>';
+}
+document.getElementById('content').innerHTML=h;
+}
+function clock(){return String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0')}
+function setLength(min){running=false;clearInterval(timerHandle);seconds=min*60;render()}
+function toggle(){running=!running;clearInterval(timerHandle);if(running){timerHandle=setInterval(()=>{seconds=Math.max(0,seconds-1);const node=document.getElementById('clock');if(node)node.textContent=clock();if(seconds===0){running=false;clearInterval(timerHandle);render()}},1000)}render()}
+render();
+</script></body></html>
